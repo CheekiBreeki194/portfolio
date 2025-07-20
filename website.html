@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jernej Flisar – Portfelj</title>
+  <style>
+    :root {
+      --accent: #0057b8;
+      --text-light: #ffffff; /* popravljen tekst na bel za boljši kontrast */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      background: url('background.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      transition: color 0.4s;
+    }
+
+    main.hero {
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem 4rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 100%;
+    min-height: 400px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      color: var(--text-light);
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        font-size: 3rem;
+    }
+
+    .social-icons a,
+    .social-icons span {
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px);
+      color: #003f7d;
+    }
+
+    .social-icons span {
+      cursor: default;
+    }
+
+    .social-icons img {
+      display: block;
+      width: 36px;
+      height: 36px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.3rem; }
+      .subtitle { font-size: 1rem; }
+      .social-icons {
+        font-size: 1.5rem;
+        gap: 1rem;
+      }
+      main.hero {
+        padding: 1.5rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="hero">
+    <h1>Jernej Flisar</h1>
+    <p class="subtitle">Reševanje problemov z ustvarjalnostjo in kodo.</p>
+    <div class="social-icons">
+      <a href="https://github.com/CheekiBreeki194" target="_blank" aria-label="GitHub">🐙</a>
+      <a href="https://mail.google.com/mail/?view=cm&to=flisar.jernej@gmail.com" target="_blank" aria-label="Email">✉️</a>
+      <a href="CV.pdf" target="_blank" aria-label="CV">📄</a>
+      <a href="#" onclick="showDiscordUsername()" aria-label="Discord">
+        <img src="discord-logo.png" alt="Discord" style="width:36px; height:36px; vertical-align:middle;">
+        </a>
+      </span>
+    </div>
+  </main>
+
+
+  <script>
+  function showDiscordUsername() {
+    alert('Na discordu me najdeš kot: ceekibreki');
+  }
+</script>
+</body>
+</html>
